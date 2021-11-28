@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Emman
 - 👀 I’m interested in game dev
-- 🌱 I’m currently learning web dev
+- 
 
 
 <!---
