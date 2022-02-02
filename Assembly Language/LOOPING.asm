@@ -1,0 +1,47 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+    NUM1 DB 'Enter an Integer: $'
+    CMPGRTER DB 0DH,0AH,'THE INPUTTED INTEGER IS GREATER THAN 5$'
+    CMPLSS DB 0DH,0AH,'THE INPUTTED INTEGER IS LESS THAN 5$'
+    CMPEQL DB 0DH,0AH,'THE INPUTTED INTEGER IS EQUAL TO 5$'
+    STRING1 DB 'THE 255 ASCII CHARACTERS ARE : $'
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    MOV CX, 10    ; NUMBER OF CHAR THAT U WILL PRINT   // COUNT
+    
+    MOV AH, 9
+    LEA DX, STRING1
+    INT 21H
+
+    MOV AH, 2
+    MOV DL, 48
+    @LOOP:
+        INT 21H  
+
+        MOV DH, DL    ; DL TO DH  
+
+        MOV AH, 2
+        MOV DL, 0DH
+        INT 21H
+
+        MOV AH, 2
+        MOV DL, 0AH
+        INT 21H
+
+        MOV DL, DH    ; BACK TO DL
+        
+        INC DL   ;INCREMENT DL
+        DEC CX   ;DECRES CX
+        JNZ @LOOP   ; IF CX NOT ZERO
+
+@EXIT:
+    MOV AH, 4CH  ;RETURN TO DOS
+    INT 21H
+
+MAIN ENDP
+END MAIN
