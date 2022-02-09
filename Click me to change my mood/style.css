@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.moods {
+    font-size: 50px;
+    color: darkgreen  ;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight {
+    font-weight: 800;
+    color: rgb(34, 248, 255);
+}
+
+
+.emoji {
+    font-size: 15rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.happy {
+    display: none;
+}
+
+.sad {
+    display: none;
+}
+
+.scared {
+    display: none;
+}
+
+.tired {
+    display: none;
+}
+
+.angry {
+    display: none;
+}
+
+.cool {
+    display: none;
+}
+
+.funny {
+    display: none;
+}
+
+.love {
+    display: none;
+}
+
+.text {
+    font-size: 50px;
+    font-family:  monospace;
+    margin-top: 30px;
+}
+
+.happy-text {
+    display: none;
+}
+
+.sad-text {
+    display: none;
+}
+
+.scared-text {
+    display: none;
+}
+
+.tired-text {
+    display: none;
+}
+
+.angry-text {
+    display: none;
+}
+
+.cool-text {
+    display: none;
+}
+
+.funny-text {
+    display: none;
+}
+
+.love-text {
+    display: none;
+}
+
+
+
+.active {
+    display: block;
+}
